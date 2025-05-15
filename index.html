@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./static/libs/scrollReveal/scrollreveal.min.js"></script>
+    <!-- 引入font-awesome依赖 -->
+    <link
+      href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="./static/libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .iframe-row {
+          display: flex;
+          gap: 10px; /* iframe 之间的间距 */
+      }
+      .iframe-container {
+          width: 400px;
+          height: 400px;
+          overflow: hidden;
+          position: relative;
+          border: 1px solid #ccc; /* 可选的边框以更好地看到容器 */
+      }
+      .iframe-container iframe {
+          position: absolute;
+          top: -80px; /* 调整这个值来选择显示的部分 */
+          left: -200px; /* 调整这个值来选择显示的部分 */
+          width: 800px; /* 必须大于容器宽度 */
+          height: 700px; /* 必须大于容器高度 */
+          border: none;
+      }
+  </style>
+
+    <title>MambaLLIE</title>
+  </head>
+  <body>
+    <!-- 网页头部 -->
+    <header>
+      <div class="logo">MambaLLIE</div>
+      <nav>
+        <a href="#Homepage">Pipeline</a>
+        <a href="#Demo">Demo</a>
+        <a href="#Abstract">Abstract</a>
+        <a href="#Our Method">Methodology</a>
+        <a href="#Result">Result</a>
+        <a href="#Cite Our Work">Cite Our Work</a>
+      </nav>
+      <div class="burger">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
+    </header>
+    <div id="Homepage" class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+          <!-- 轮播图一 -->
+          <div class="glide__slide">
+            <div class="slide-caption left">
+              <button class="explore-btn">MambaLLIE</button>
+              <h1>Implicit Retinex-Aware Low Light Enhancement with Global-then-Local State Space</h1>
+              <button class="url-btn" onclick="window.location.href='https://github.com/MambaLLIE/MambaLLIE'">Code</button>
+              <!-- <h3>Anonymous</h3> -->
+              <!-- <h3>PCALab@NJUST</h3> -->
+            </div>
+            <div class="backdrop"></div>
+            <img src="./static/images/pipeline.png" />
+          </div>
+
+          <!-- 轮播图二 -->
+          <!-- <div class="glide__slide">
+            <div class="slide-caption right">
+              <h1> </h1>
+              <h3> </h3>
+            </div>
+            <div class="backdrop"></div>
+            <img src="./static/images/fig_2.png" /> -->
+            
+          <!-- <div class="glide__slide">
+            <div class="slide-caption left">
+              <h1> </h1>
+              <h3> </h3>
+            </div>
+            <div class="backdrop"></div>
+            <video
+              src="./static/images/fig_7.png"
+              muted
+              autoplay
+              loop
+            ></video>
+          </div> -->
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fa fa-angle-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fa fa-angle-right"></i>
+          </button>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <section id="Demo" class="company-activities">
+        <h2 class="title1">Video Demo</h2>
+        <!-- 添加视频播放器 -->
+        <video controls>
+          <source src="./static/videos/videoi1.mp4" type="video/mp4">
+          <!-- 添加其他视频格式的源 -->
+          Your browser does not support the video tag.
+        </video>
+
+        <body>
+          <p>
+            LoLv2 datasets. 
+          </p>
+          <div class="iframe-row">
+              <div class="iframe-container">
+                  <iframe src="https://imgsli.com/MjY2Nzc5"></iframe>
+              </div>
+              <div class="iframe-container">
+                  <iframe src="https://imgsli.com/MjY2Nzgw"></iframe>
+              </div>
+              <div class="iframe-container">
+                  <iframe src="https://imgsli.com/MjY2Nzgx"></iframe>
+              </div>
+          </div>
+          <p>
+            SMID and SDSD datasets. 
+          </p>
+        <div class="iframe-row">
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzg3"></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzg1"></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzg2"></iframe>
+            </div>
+        </div>
+
+        <p>
+          ExDark dataset. 
+        </p>
+        <div class="iframe-row">
+
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzky"></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzkw"></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://imgsli.com/MjY2Nzk1"></iframe>
+            </div>
+        </div>
+      </body>
+
+      </section>
+
+      <section id="Abstract" class="Abstract">
+        <h2 class="title1">Abstract</h2>
+        <div class="intro">
+          <p>
+            Recent advances in low light image enhancement have been dominated by Retinex-based learning framework, leveraging convolutional neural networks (CNNs) and Transformers. However, the vanilla Retinex theory primarily addresses global illumination degradation and neglects local issues such as noise and blur in low light conditions. Moreover, CNNs and Transformers struggle to capture global degradation due to their limited receptive fields. While state space models (SSMs) have shown promise in the long-sequence modeling, they face challenges in combining local invariants and global context in visual data.
+   In this paper, we introduce MambaLLIE, an implicit Retinex-aware low light enhancer featuring a global-then-local state space design. We first propose a Local-Enhanced State Space Module (LESSM) that incorporates an augmented local bias within a 2D selective scan mechanism, enhancing the original SSMs by preserving local 2D dependency. Additionally, an Implicit Retinex-aware Selective Kernel module (IRSK) dynamically selects features using spatially-varying operations, adapting to varying inputs through an adaptive kernel selection process. Our Global-then-Local State Space Block (GLSSB) integrates LESSM and IRSK with layer normalization (LN) as its core. This design enables MambaLLIE to achieve comprehensive global long-range modeling and flexible local feature aggregation. Extensive quantitative and qualitative experiments demonstrate that MambaLLIE significantly outperforms state-of-the-art CNN and Transformer-based methods.
+          </p>
+        </div>
+          
+      </section>
+    
+      <section id="Methodology" class="showcases section-bg">
+        <h2 class="title1">Methodology</h2>
+        <div class="showcase">
+          <div class="showcase-img">
+            <img src="./static/images/pipeline.png" alt="showcase" />
+          </div>
+          <!-- <div class="showcase-content">
+            <h3>Global-then-Local State Space</h3>
+            <p>
+              Under construction</p>
+          </div> -->
+      </section>
+
+      <section id="Compare" class="team-intro section-bg">
+        <h2 class="title1">Comparison</h2>
+        <div class="intro">
+          <p>
+            Quantitative comparisons on LOL-V2-real, LOL-V2-syn, SMID, SDSD-indoor and SDSDoutdoor
+datasets. The best result is in red color while the second best result is in blue color. </p>
+            <img src="./static/images/comp1.jpg" alt="showcase" />
+
+        <div class="intro">
+        <p>
+          Qualitative comparison with previous methods on LOL-V2-real and LOL-V2-syn datasets.
+  Our MambaLLIE effectively enhances the illumination and preserves the color. 
+        </p>
+        <img src="./static/images/comp2.png" alt="showcase" />
+
+        <div class="intro">
+          <p>
+            Qualitative comparison with previous methods on SMID, SDSD-indoor and SDSD-outdoor
+            datasets. Our MambaLLIE restore the texture and color under challenging degradation, such as the
+            wooden bench and reflective glass.
+          </p>
+            <img src="./static/images/res2.png" alt="showcase" />
+        </div>
+      </section>
+
+      <section id="Result" class="team-intro section-bg">
+        <h2 class="title1">Result</h2>
+        <div class="intro">
+          <p>
+            Low light object detection results on the ExDark dataset. </p>
+            <img src="./static/images/obj.png" alt="showcase" />
+        </div>
+
+        <div class="intro">
+          <p>
+            Qualitative comparison with previous SOTA method on ExDark dataset.
+          </p>
+            <img src="./static/images/Object.png" alt="showcase" />
+        </div>
+      </section>
+
+      <div class="intro">
+        <p>
+          User study on the challenging low light image enhancement.
+        </p>
+          <img src="./static/images/user_study.png" alt="showcase" />
+      </div>
+
+      
+      <div class="intro">
+        <p>
+          Ablation Study. (a) Effects of design choices. (b) Effects of different selective kernel.
+        </p>
+          <img src="./static/images/abl.png" alt="showcase" />
+      </div>
+
+      <div class="intro">
+        <p>
+          The details of selective kernel behaviour, the LAM visualization demonstrates influence
+          of similar local information is higher than that of global dependence, our local-enhanced strategy
+          underscores the feature. Besides, the larger receptive fields can provide globally consistent results.
+        </p>
+          <img src="./static/images/select.png" alt="showcase" />
+      </div>
+
+    </section>
+
+      <section id="Cite Our Work" class="company-activities">
+        <h2 class="title1">Cite Our Work</h2>
+
+      </section>
+    </div>
+    <footer>
+        <ul class="social-links">
+          <li><a href="http://www.baidu"><i class="fas fa-print"></i></a></li>
+          <li><a href="http://www.baidu"><i class="fab fa-github"></i></a></li>
+          <li><a href="http://www.baidu"><i class="fab fa-google"></i></a></li>
+        </ul>
+        <!-- <p class="icp-info">Anonymous</p> -->
+        <p class="rights">&copy; All right reserved</p>
+        <div class="scroll-to-top">
+          <a href="#"><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- 引入JS文件 --> 
+    <script src="./static/libs/anime/anime.min.js"></script>
+    <script src="./static/libs/glide/glide.min.js"></script>
+    <script src="./static/libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="./static/libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
