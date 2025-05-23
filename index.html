@@ -35,12 +35,12 @@
       }
   </style>
 
-    <title>MambaLLIE</title>
+    <title>PASSDehazing</title>
   </head>
   <body>
     <!-- 网页头部 -->
     <header>
-      <div class="logo">MambaLLIE</div>
+      <div class="logo">PASSDehazing</div>
       <nav>
         <a href="#Homepage">Pipeline</a>
         <a href="#Demo">Demo</a>
@@ -61,9 +61,10 @@
           <!-- 轮播图一 -->
           <div class="glide__slide">
             <div class="slide-caption left">
-              <button class="explore-btn">MambaLLIE</button>
-              <h1>Implicit Retinex-Aware Low Light Enhancement with Global-then-Local State Space</h1>
-              <button class="url-btn" onclick="window.location.href='https://github.com/MambaLLIE/MambaLLIE'">Code</button>
+              <button class="explore-btn">PASSDehazing</button>
+              <h1>Physically-Aware Spatio-Temporal State Space with
+                Locality Consistency for Drone Video Dehazing</h1>
+              <button class="url-btn" onclick="window.location.href='https://passdehazing.github.io/PASS/'">Code</button>
               <!-- <h3>Anonymous</h3> -->
               <!-- <h3>PCALab@NJUST</h3> -->
             </div>
@@ -113,150 +114,12 @@
         <h2 class="title1">Video Demo</h2>
         <!-- 添加视频播放器 -->
         <video controls>
-          <source src="./static/videos/videoi1.mp4" type="video/mp4">
+          <source src="./static/videos/video-demo.mp4" type="video/mp4">
           <!-- 添加其他视频格式的源 -->
           Your browser does not support the video tag.
         </video>
 
-        <body>
-          <p>
-            LoLv2 datasets. 
-          </p>
-          <div class="iframe-row">
-              <div class="iframe-container">
-                  <iframe src="https://imgsli.com/MjY2Nzc5"></iframe>
-              </div>
-              <div class="iframe-container">
-                  <iframe src="https://imgsli.com/MjY2Nzgw"></iframe>
-              </div>
-              <div class="iframe-container">
-                  <iframe src="https://imgsli.com/MjY2Nzgx"></iframe>
-              </div>
-          </div>
-          <p>
-            SMID and SDSD datasets. 
-          </p>
-        <div class="iframe-row">
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzg3"></iframe>
-            </div>
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzg1"></iframe>
-            </div>
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzg2"></iframe>
-            </div>
-        </div>
-
-        <p>
-          ExDark dataset. 
-        </p>
-        <div class="iframe-row">
-
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzky"></iframe>
-            </div>
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzkw"></iframe>
-            </div>
-            <div class="iframe-container">
-                <iframe src="https://imgsli.com/MjY2Nzk1"></iframe>
-            </div>
-        </div>
-      </body>
-
-      </section>
-
-      <section id="Abstract" class="Abstract">
-        <h2 class="title1">Abstract</h2>
-        <div class="intro">
-          <p>
-            Recent advances in low light image enhancement have been dominated by Retinex-based learning framework, leveraging convolutional neural networks (CNNs) and Transformers. However, the vanilla Retinex theory primarily addresses global illumination degradation and neglects local issues such as noise and blur in low light conditions. Moreover, CNNs and Transformers struggle to capture global degradation due to their limited receptive fields. While state space models (SSMs) have shown promise in the long-sequence modeling, they face challenges in combining local invariants and global context in visual data.
-   In this paper, we introduce MambaLLIE, an implicit Retinex-aware low light enhancer featuring a global-then-local state space design. We first propose a Local-Enhanced State Space Module (LESSM) that incorporates an augmented local bias within a 2D selective scan mechanism, enhancing the original SSMs by preserving local 2D dependency. Additionally, an Implicit Retinex-aware Selective Kernel module (IRSK) dynamically selects features using spatially-varying operations, adapting to varying inputs through an adaptive kernel selection process. Our Global-then-Local State Space Block (GLSSB) integrates LESSM and IRSK with layer normalization (LN) as its core. This design enables MambaLLIE to achieve comprehensive global long-range modeling and flexible local feature aggregation. Extensive quantitative and qualitative experiments demonstrate that MambaLLIE significantly outperforms state-of-the-art CNN and Transformer-based methods.
-          </p>
-        </div>
-          
-      </section>
-    
-      <section id="Methodology" class="showcases section-bg">
-        <h2 class="title1">Methodology</h2>
-        <div class="showcase">
-          <div class="showcase-img">
-            <img src="./static/images/pipeline.png" alt="showcase" />
-          </div>
-          <!-- <div class="showcase-content">
-            <h3>Global-then-Local State Space</h3>
-            <p>
-              Under construction</p>
-          </div> -->
-      </section>
-
-      <section id="Compare" class="team-intro section-bg">
-        <h2 class="title1">Comparison</h2>
-        <div class="intro">
-          <p>
-            Quantitative comparisons on LOL-V2-real, LOL-V2-syn, SMID, SDSD-indoor and SDSDoutdoor
-datasets. The best result is in red color while the second best result is in blue color. </p>
-            <img src="./static/images/comp1.jpg" alt="showcase" />
-
-        <div class="intro">
-        <p>
-          Qualitative comparison with previous methods on LOL-V2-real and LOL-V2-syn datasets.
-  Our MambaLLIE effectively enhances the illumination and preserves the color. 
-        </p>
-        <img src="./static/images/comp2.png" alt="showcase" />
-
-        <div class="intro">
-          <p>
-            Qualitative comparison with previous methods on SMID, SDSD-indoor and SDSD-outdoor
-            datasets. Our MambaLLIE restore the texture and color under challenging degradation, such as the
-            wooden bench and reflective glass.
-          </p>
-            <img src="./static/images/res2.png" alt="showcase" />
-        </div>
-      </section>
-
-      <section id="Result" class="team-intro section-bg">
-        <h2 class="title1">Result</h2>
-        <div class="intro">
-          <p>
-            Low light object detection results on the ExDark dataset. </p>
-            <img src="./static/images/obj.png" alt="showcase" />
-        </div>
-
-        <div class="intro">
-          <p>
-            Qualitative comparison with previous SOTA method on ExDark dataset.
-          </p>
-            <img src="./static/images/Object.png" alt="showcase" />
-        </div>
-      </section>
-
-      <div class="intro">
-        <p>
-          User study on the challenging low light image enhancement.
-        </p>
-          <img src="./static/images/user_study.png" alt="showcase" />
-      </div>
-
-      
-      <div class="intro">
-        <p>
-          Ablation Study. (a) Effects of design choices. (b) Effects of different selective kernel.
-        </p>
-          <img src="./static/images/abl.png" alt="showcase" />
-      </div>
-
-      <div class="intro">
-        <p>
-          The details of selective kernel behaviour, the LAM visualization demonstrates influence
-          of similar local information is higher than that of global dependence, our local-enhanced strategy
-          underscores the feature. Besides, the larger receptive fields can provide globally consistent results.
-        </p>
-          <img src="./static/images/select.png" alt="showcase" />
-      </div>
-
-    </section>
+       
 
       <section id="Cite Our Work" class="company-activities">
         <h2 class="title1">Cite Our Work</h2>
